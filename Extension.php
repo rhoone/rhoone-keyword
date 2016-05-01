@@ -12,6 +12,8 @@
 
 namespace rhoone\keyword;
 
+use rhoone\keyword\widgets\KeywordWidget;
+
 /**
  * Description of Extension
  *
@@ -42,6 +44,6 @@ class Extension extends \rhoone\extension\Extension
 
     public function search($keywords)
     {
-        
+        return KeywordWidget::widget(['keyword' => $keywords]);
     }
 }
