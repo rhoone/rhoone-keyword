@@ -11,16 +11,24 @@
  */
 use rhoone\models\Keyword;
 /* @var $keyword Keyword */
+function print_array($array)
+{
+    foreach ($array as $content) {
+        echo $content . "<br/>";
+    }
+}
 ?>
 <table class="table">
-    <tbody>
+    <thead>
         <tr>
             <th>Keyword</th>
-            <td><?= $keyword->raw ?></td>
-        </tr>
-        <tr>
             <th>Segmented</th>
-            <td><?php print_r($keyword->segmented) ?></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><?= $keyword->raw ?></td>
+            <td><?php print_array($keyword->segmented) ?></td>
         </tr>
     </tbody>
 </table>
